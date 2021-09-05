@@ -9,8 +9,9 @@ export const getQuestions = () => { // Get Questions Api
             headers: {
                 'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM'
             },
-            method: "GET",
-            mode: 'cors',
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            mode: 'no-cors',
         }).then((res) => {
             const { data } = res;
             // console.log("Questions = ", data)
@@ -41,8 +42,9 @@ export const getReviewsQuestion2 = (date) => {
             headers: {
                 'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM'
             },
-            method: "GET",
-            mode: 'cors',
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            mode: 'no-cors',
         }).then((res) => {
 
             const { data: { line_chart_data } } = res; // destruct line_chart_data from response request
@@ -117,8 +119,12 @@ export const getReviewsQuestion4 = (date) => {
 
         await axios.get(`https://staging.mymelior.com/v1/branches/1/progress?date_from=${dateFormat[0]}&date_to=${dateFormat[1]}`, {
             headers: {
-                'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM',
-            }
+                'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM'
+            },
+            'Access-Control-Allow-Origin': '*',
+            'Content-Type': 'application/json',
+            mode: 'no-cors',
+
         }).then((res) => {
 
             const { data: { line_chart_data } } = res;  // destruct line_chart_data from response request
