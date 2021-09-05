@@ -8,7 +8,9 @@ export const getQuestions = () => { // Get Questions Api
         await axios.get('https://staging.mymelior.com/v1/questions', {
             headers: {
                 'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM'
-            }
+            },
+            method: "GET",
+            mode: 'cors',
         }).then((res) => {
             const { data } = res;
             // console.log("Questions = ", data)
@@ -37,8 +39,10 @@ export const getReviewsQuestion2 = (date) => {
 
         await axios.get(`https://staging.mymelior.com/v1/branches/1/progress?date_from=${dateFormat[0]}&date_to=${dateFormat[1]}`, {
             headers: {
-                'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM',
-            }
+                'Authorization': 'Bearer SLSmxK17vjRInEWIiFQjwE1QIDfeSM'
+            },
+            method: "GET",
+            mode: 'cors',
         }).then((res) => {
 
             const { data: { line_chart_data } } = res; // destruct line_chart_data from response request
