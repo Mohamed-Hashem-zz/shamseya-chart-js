@@ -1,0 +1,5 @@
+export const LINE_CHART_DATA_2 = "LINE_CHART_DATA_2";
+
+export const LINE_CHART_DATA_4 = "LINE_CHART_DATA_4";
+
+export const QUESTIONS = "QUESTIONS";
