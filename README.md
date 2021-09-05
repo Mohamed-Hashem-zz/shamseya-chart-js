@@ -2,7 +2,7 @@
 Chart-js Task
 # Webist Demo Link : 
 
-### https://app.netlify.com/sites/shamseya-chart-js/settings/general
+### https://shamseya-chart-js.netlify.app/
 
 # Getting Started with The Task 
 
